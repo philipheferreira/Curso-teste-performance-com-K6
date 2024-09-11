@@ -3,8 +3,8 @@ import {check} from 'k6'; // Importa modulo para poder usar as validações com 
 
 
 export const options = {
-	vus: 1, // definindo o numero de usuarios acessando e gerando carga
-	duration: '3s'
+	vus: 10, // definindo o numero de usuarios acessando e gerando carga
+	duration: '10s'
 }
 
 
