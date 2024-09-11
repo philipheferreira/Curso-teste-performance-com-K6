@@ -1,0 +1,2 @@
+1 - não pode ter espaço no nome do arquivo criado, nem barras
+2 - não esqueça de colocar .js no final das coisas
