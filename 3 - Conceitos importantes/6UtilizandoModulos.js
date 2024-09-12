@@ -15,3 +15,6 @@ import { AWSConfig, S3Client } from 'https://jslib.k6.io/aws/0.4.0/s3.js';
 import runTest from './test1.js';
 
 
+// Se utilizar modulos externos adicionados tem um impacto negativo pois aumenta o uso de memoria e o uso de CPU
+// Se for feita uma solução utilizando apenas os modulos nativos da ferramenta, a solução será mais rapida e eficiente
+// Caso seja utilizado um modulo externo, de preferencia utilizar os modulos s3.js
