@@ -16,6 +16,19 @@
 	4 - exec: 
 	5 - env: 
 	6 - tags: 
+
+
+	* Por número de iterações:
+	1 - shared-iterations: 
+	2 - per-vu-iterations: faz com que cada vu execute as iterações configuradas
+
+	* Por número de VUs:
+	1 - constant-vus: envia um numero de vus constante para a execução
+	2 - ramping-vus: Aumenta gradativamente o numero de vus de acordo com os estagios configurados
+
+	* Por taxa de iteração:
+	1 - constant-arrival-rate: Inicia iterações a uma taxa constante
+	2 - ramping-arrival-rate: Aumenta a taxa de iterações de acordo com os estagios configurados
 */
 
 
