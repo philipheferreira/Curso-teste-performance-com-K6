@@ -10,12 +10,12 @@
 4 - Análise granular dos resultados: Diferentes variáveis de ambiente e tags podem ser definidas para cada cenario.
 
 	Das opções e configurações do escopo de options podem ser definidas as seguintes, em diferentes cenarios:
-	1 - executor: 
-	2 - startTime: 
-	3 - gracefulstop: 
-	4 - exec: 
-	5 - env: 
-	6 - tags: 
+	1 - executor: é um item obrigatorio
+	2 - startTime: é o ponto em que este cenário deve iniciar no tempo de vida do teste de performace
+	3 - gracefulstop: Periodo no final do teste em que o k6 permite que as iterações em andamento terminem
+	4 - exec: É o nome da função gs exportada a ser executada
+	5 - env: Onde define o environment especificas para esse cenario
+	6 - tags: Defini tags para busca e configurações especificas para um cenario
 
 
 	* Por número de iterações:
