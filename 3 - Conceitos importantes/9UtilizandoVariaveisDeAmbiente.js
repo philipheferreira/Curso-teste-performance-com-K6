@@ -109,6 +109,8 @@ export default function(){
 //			-------------------------------			SCRIPT SEM options declarando duração e usuarios pelo CMD 		--------------------------------------------
 
 
+/*
+
 
 import http from 'k6/http';
 import { sleep } from 'k6';
@@ -125,5 +127,29 @@ export default function(){
 }
 
 
+*/
+
 // o comando a baixo além de definir o valor na variavel URL de ambiente defini o tempo de duração do teste
 //k6 run -e URL=https://test-api.k6.io/public/crocodiles/ 9UtilizandoVariaveisDeAmbiente.js --duration 10s --vus 30
+
+
+//			----------------------------------		SCRIPT SEM options declarando stages pelo CMD 		-----------------------------------------------
+
+
+
+import http from 'k6/http';
+import { sleep } from 'k6';
+
+
+// caso o export const options seja retirado como um todo o k6 usa os parametros pre-definidos de vus = 1 e duration = 1s
+
+export default function(){
+	const BASE_URL = __ENV.URL;
+	const res = http.get(BASE_URL);
+
+	sleep(1);
+
+	// o comando a baixo além de definir o valor na variavel URL de ambiente defini o tempo de duração do teste
+	//k6 run -e URL=https://test-api.k6.io/public/crocodiles/ 9UtilizandoVariaveisDeAmbiente.js --stage 5s:5,3s:30,5s:0
+
+}
