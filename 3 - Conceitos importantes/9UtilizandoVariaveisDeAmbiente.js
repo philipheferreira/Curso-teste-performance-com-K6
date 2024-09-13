@@ -64,3 +64,6 @@ export default function(){
 	sleep(1);
 
 }
+
+//k6 run -e URL=https://test-api.k6.io/public/crocodiles/ 9UtilizandoVariaveisDeAmbiente.js 
+// ou k6 run --env URL=https://test-api.k6.io/public/crocodiles/ 9UtilizandoVariaveisDeAmbiente.js
