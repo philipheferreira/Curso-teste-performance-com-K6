@@ -51,7 +51,7 @@ export default function () {
 
     check(res, {// chamada rest quando retornar 201 mostrara sucesso ao registrar e retornar status
         'sucesso login': (r) => r.status === 200,
-        'token gerado': (r) => r.json('access') != ''
+        'token gerado com sucesso': (r) => r.json('access') != ''
     });
 
     sleep(1)
