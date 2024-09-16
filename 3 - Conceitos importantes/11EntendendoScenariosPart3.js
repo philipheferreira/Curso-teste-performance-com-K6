@@ -36,8 +36,4 @@
 1 - Executor com foco em métrica como o RPS
 
 
-
-
-
-
 */
