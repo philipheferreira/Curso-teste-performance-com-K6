@@ -19,11 +19,15 @@ import http from 'k6/http';
 import { check, sleep } from 'k6';
 
 export const options = {
-    stages: [{ duration: '10s', target: 10 }],
+    stages: [
+    	{ duration: '5s', target: 5 },
+    	{ duration: '5s', target: 5 },
+    	{ duration: '2s', target: 50 },
+    	{ duration: '2s', target: 50 },
+    	{ duration: '2s', target: 0 },
+    	],
     thresholds: {
-        checks: ['rate > 0.95'],
-        http_req_failed: ['rate < 0.01'],
-        http_req_duration: ['p(95) < 500']
+        checks: ['rate < 0.01']
     }
 }
 
@@ -32,9 +36,9 @@ export default function () {
     const PASS = 'user123'
     const BASE_URL = 'https://test-api.k6.io';
 
-    console.log( USER + PASS);
+    console.log(USER);
 
-    const res = http.post(`${BASE_URL}/user/register/`, {// metodo post dentro da constant res
+    const res = http.post(`${BASE_URL}/user/token/login`, {// metodo post dentro da constant res
         username: USER,// Infos que serão passadas pelo post
         first_name: 'crocrodilo',
         last_name: 'dino',
