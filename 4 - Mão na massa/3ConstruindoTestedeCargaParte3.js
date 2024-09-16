@@ -38,15 +38,15 @@ export default function () {
 
     console.log( USER + PASS);
 
-    const res = http.post(`${BASE_URL}/user/register/`, {
-        username: USER,
+    const res = http.post(`${BASE_URL}/user/register/`, {// metodo post dentro da constant res
+        username: USER,// Infos que serão passadas pelo post
         first_name: 'crocrodilo',
         last_name: 'dino',
-        email: USER,
-        password: PASS
+        email: USER,// email recebe o user definido dentro do codigo
+        password: PASS// senha recebe pass que é declarada dentro do codigo
     });
 
-    check(res, {
+    check(res, {// chamada rest quando retornar 201 mostrara sucesso ao registrar e retornar status
         'sucesso ao registar': (r) => r.status === 201
     });
 
