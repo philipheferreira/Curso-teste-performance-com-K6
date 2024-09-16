@@ -17,42 +17,42 @@
 
 import http from 'k6/http';
 import { check, sleep } from 'k6';
+import { SharedArray } from 'k6/data';
+import papaparse from 'https://jslib.k6.io/papaparse/5.1.1/index.js';// biblioteca utilizada para receber dados do excel
 
 export const options = {
     stages: [
-    	{ duration: '5s', target: 5 },
-    	{ duration: '5s', target: 5 },
-    	{ duration: '2s', target: 50 },
-    	{ duration: '2s', target: 50 },
-    	{ duration: '2s', target: 0 },
-    	],
+        { duration: '5s', target: 5 },
+        //{ duration: '5s', target: 5 },
+        //{ duration: '2s', target: 50 },
+        //{ duration: '2s', target: 50 },
+      //  { duration: '5s', target: 0 },
+    ],
     thresholds: {
-        checks: ['rate < 0.01']
+        http_req_failed: ['rate < 0.01']
     }
 }
 
+const csvData = new SharedArray('Ler dados', function(){
+    return papaparse.parse(open('./usuarios.csv'), {header: true}).data;
+});
+
 export default function () {
-    const USER = `${Math.random()}@mail.com`
+    const USER = csvData[Math.floor(Math.random() * csvData.length)].email
     const PASS = 'user123'
     const BASE_URL = 'https://test-api.k6.io';
 
     console.log(USER);
 
-    const res = http.post(`${BASE_URL}/user/token/login`, {// metodo post dentro da constant res
-        username: USER,// Infos que serão passadas pelo post
-        first_name: 'crocrodilo',
-        last_name: 'dino',
-        email: USER,// email recebe o user definido dentro do codigo
-        password: PASS// senha recebe pass que é declarada dentro do codigo
+    const res = http.post(`${BASE_URL}/auth/token/login/`, {// metodo post dentro da constant res
+        username: USER,
+        password: PASS
     });
 
     check(res, {// chamada rest quando retornar 201 mostrara sucesso ao registrar e retornar status
-        'sucesso ao registar': (r) => r.status === 201
+        'sucesso login': (r) => r.status === 200,
+        'token gerado': (r) => r.json('access') != ''
     });
 
     sleep(1)
 }
-
-
-
-
