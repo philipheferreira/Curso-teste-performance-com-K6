@@ -35,7 +35,7 @@ export const options = {
 };
 
 export function listar(){
-    http.get(__ENV.URL+'/crocodiles')
+    http.get(__ENV.URL+'/crocodiles/')
 };
 
 export function buscar(){
@@ -46,4 +46,4 @@ export function buscar(){
     }
 };
 
-// Quando rodar o comando usar k6 run 6ConstruindoTestedeCargaParte6.js -e URL=//https://test-api.k6.io/public
+// Quando rodar o comando usar k6 run 6ConstruindoTestedeCargaParte6.js -e URL=https://test-api.k6.io/public
