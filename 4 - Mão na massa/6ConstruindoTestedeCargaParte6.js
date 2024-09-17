@@ -8,7 +8,7 @@
 		* Ambos os testes devem ser executados simultaneamente
 */
 
-import http from 'k6';
+import http from 'k6/http';
 
 export const options = {
 	scenarios:{
@@ -18,7 +18,7 @@ export const options = {
 			duration: '30s',
 			rate: 200,
 			timeUnit: '1s',
-			preAllocatedVus: 150,
+			preAllocatedVUs: 150,
 			gracefulStop: '10s',
 			tags: {test_type: 'listagem_de_crocodilos'}
 		},
@@ -35,7 +35,7 @@ export const options = {
 };
 
 export function listar(){
-    http.get(__ENV.URL+'/crocodiles/')
+    http.get(__ENV.URL+'/crocodiles')
 };
 
 export function buscar(){
