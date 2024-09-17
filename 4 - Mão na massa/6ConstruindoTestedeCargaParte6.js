@@ -13,17 +13,17 @@ import http from 'k6';
 export const options = {
 	scenarios:{
 		listar: {
-			executor: 'const-arrival-rate',
+			executor: 'constant-arrival-rate',
 			exec: 'listar',
 			duration: '30s',
 			rate: 200,
 			timeUnit: '1s',
-			preAlocatedVud: 150,
+			preAllocatedVus: 150,
 			gracefulStop: '10s',
 			tags: {test_type: 'listagem_de_crocodilos'}
 		},
 		buscar: {
-			executor:'per-vu-iteration',
+			executor:'per-vu-iterations',
 			exec: 'buscar',
 			vus: 50,
 			iterations: 20,
