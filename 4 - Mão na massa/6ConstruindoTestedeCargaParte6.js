@@ -32,17 +32,18 @@ export const options = {
 			tags: {test_type: 'busca_de_crocodilos'}
 		}
 	}
-
 };
 
 export function listar(){
-	http.get(__ENV.URL+ 'crocodiles');
-}
+    http.get(__ENV.URL+'/crocodiles/')
+};
 
 export function buscar(){
-	if(__VU % 2 === 0){
-		http.get(__ENV.URL + '/crocodiles/2');
-	}else{
-		http.get(__ENV.URL + '/crocodiles/1');
-	}
-}
+    if(__VU % 2 === 0){
+        http.get(__ENV.URL+'/crocodiles/2')
+    }else{
+        http.get(__ENV.URL+'/crocodiles/1')
+    }
+};
+
+// Quando rodar o comando usar k6 run 6ConstruindoTestedeCargaParte6.js -e URL=//https://test-api.k6.io/public
