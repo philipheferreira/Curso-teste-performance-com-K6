@@ -38,4 +38,3 @@ export const options = {
 		{duration: "10s", target: 0}, //
 		]
 	}
-}
