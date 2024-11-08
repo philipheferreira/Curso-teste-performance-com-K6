@@ -12,8 +12,8 @@ export const options = {
 	thresholds: { // Parte responsavel por definir todos os limites do teste 
 		http_req_failed: ['rate < 0.01'], // Definição de limite sobre as requisições com falhas
 		//http_req_duration: ['p(95) < 200', 'p(90) < 400', 'p(99.9) < 2000'] // Definir um valor limite para o tempo de duração das requisições, pode ser feito mais de um parametro para essa definição como mostrado
-		http_req_duration: [{threshold: 'p(95) < 20', abortOnFail: true}] //abortOnFail é uma diretriz que caso o threshold não atenda o que foi estipulado a aplicação para
-		checks: ['rate > 0.99'] // Os thresholds podem ser combinados com outras metricas, esse é o exemplo com checks. checks defini que a taxa de verificação para ser bem suce
+		http_req_duration: [{threshold: 'p(95) < 20', abortOnFail: true}], //abortOnFail é uma diretriz que caso o threshold não atenda o que foi estipulado a aplicação para
+		checks: ['rate > 0.99'] // Os thresholds podem ser combinados com outras metricas, esse é o exemplo com checks. checks defini que a taxa de verificação para ser bem sucedido
 	}
 }
 
