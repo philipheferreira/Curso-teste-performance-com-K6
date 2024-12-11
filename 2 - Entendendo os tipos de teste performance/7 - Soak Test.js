@@ -24,3 +24,6 @@ export const options = {
 		{duration: '2m', target: 0},
 	],
 };
+
+
+// para rodar o arquivo basta digitar o comando k6 run Soak_Test.js

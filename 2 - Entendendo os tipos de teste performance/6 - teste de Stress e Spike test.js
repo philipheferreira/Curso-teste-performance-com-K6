@@ -38,3 +38,6 @@ export const options = {
 		{duration: "10s", target: 0}, //
 		]
 	}
+
+
+	// para rodar o arquivo basta digitar o comando k6 run teste_de_Stress_e_Spike_test.js

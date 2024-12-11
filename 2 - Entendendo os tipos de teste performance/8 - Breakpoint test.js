@@ -44,5 +44,7 @@ export default () => {
 	sleep(1);
 }
 
+// para rodar o arquivo basta digitar o comando k6 run Breakpoint_test.js
+
 
 // Obs: esse script exemplo não tem uma interrupção automatica
