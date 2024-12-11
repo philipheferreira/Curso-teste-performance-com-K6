@@ -53,3 +53,4 @@ export default function () {
     sleep(1)
 }
 
+// para rodar o arquivo basta digitar o comando k6 run 3ConstruindoTestedeCargaParte3.js

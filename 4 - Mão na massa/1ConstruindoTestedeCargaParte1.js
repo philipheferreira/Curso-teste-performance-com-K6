@@ -32,3 +32,5 @@ export default function(){
 		'Status code 200': (r) => r.status === 200
 	});
 }
+
+// para rodar o arquivo basta digitar o comando k6 run 1ConstruindoTestedeCargaParte1.js

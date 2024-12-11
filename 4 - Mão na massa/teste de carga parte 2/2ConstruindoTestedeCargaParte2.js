@@ -84,3 +84,5 @@ export default function(){
 
 	sleep(1)
 }
+
+// para rodar o arquivo basta digitar o comando k6 run 2ConstruindoTestedeCargaParte2.js
