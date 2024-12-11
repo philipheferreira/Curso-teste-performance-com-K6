@@ -15,3 +15,5 @@ export default function(){
 		'status code é sucesso(200)': (r) => r.status === 200 // quando o status for 200 ele retornara a seguinte resposta
 	});
 }
+
+// para rodar o arquivo basta digitar o comando k6 run 3RealizandoChecks.js

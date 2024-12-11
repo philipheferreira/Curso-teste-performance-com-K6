@@ -153,3 +153,5 @@ export default function(){
 	//k6 run -e URL=https://test-api.k6.io/public/crocodiles/ 9UtilizandoVariaveisDeAmbiente.js --stage 5s:5,3s:30,5s:0
 
 }
+
+// para rodar o arquivo basta digitar o comando k6 run 9UtilizandoVariaveisDeAmbiente.js

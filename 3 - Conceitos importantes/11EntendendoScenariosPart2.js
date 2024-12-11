@@ -132,3 +132,5 @@ PARA MAIS ESTUDOS:
 3 - externally-controled: Consegue aumentar a quantidade de VUs, pronlogar o periodo de teste
 
 */
+
+// para rodar o arquivo basta digitar o comando k6 run 11EntendendoScenariosPart2.js

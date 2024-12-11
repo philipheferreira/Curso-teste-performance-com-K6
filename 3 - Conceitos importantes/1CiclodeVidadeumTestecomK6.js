@@ -21,3 +21,5 @@ export default function(){ // está informando para o k6 que esse é o modulo de
 export function teardown(data){
 	console.log(data);
 }
+
+// para rodar o arquivo basta digitar o comando k6 run 1CiclodeVidadeumTestecomK6.js

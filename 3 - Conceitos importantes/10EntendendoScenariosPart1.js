@@ -31,5 +31,5 @@
 	2 - ramping-arrival-rate: Aumenta a taxa de iterações de acordo com os estagios configurados
 */
 
-
+// para rodar o arquivo basta digitar o comando k6 run 10EntendendoScenariosPart1.js
 

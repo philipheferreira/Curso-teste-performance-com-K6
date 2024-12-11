@@ -37,3 +37,5 @@
 
 
 */
+
+// para rodar o arquivo basta digitar o comando k6 run 11EntendendoScenariosPart3.js

@@ -102,3 +102,4 @@ export default function(){
 
 
 
+// para rodar o arquivo basta digitar o comando k6 run 7ConhecendoGroups.js
