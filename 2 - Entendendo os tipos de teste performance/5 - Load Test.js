@@ -22,3 +22,5 @@ export const options2 = {
 		{duration: '5m', target: 0},
 		]
 };
+
+// para rodar o arquivo basta digitar o comando k6 run Smoke_test.js
