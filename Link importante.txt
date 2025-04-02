@@ -2,3 +2,17 @@ https://medium.com/xp-inc/conhecendo-o-k6-para-testes-de-carga-943a0489de1e
 
 
 https://www.youtube.com/watch?v=gqvpco8uF6E
+
+
+Para baixar versão especifica: 
+https://community.chocolatey.org/packages/k6#versionhistory
+
+Estudo de métricas:
+https://dev.to/marlo2222/entendendo-as-metricas-do-k6-parte-3-m1g
+
+Monitoramento: 
+https://medium.com/@sebastian.southern/monitoring-your-k6-tests-with-xk6-dashboard-03260b3e8c92
+
+Comandos básicos de K6:
+https://grafana.com/docs/k6/latest/get-started/running-k6/
+
